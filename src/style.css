@@ -10,7 +10,12 @@ textarea {
   resize: none;
   color: #000000;
   border-left: 1px solid black;
+  border-top: 1px solid grey;
   padding: 10px;
+}
+
+.bordbtm {
+  border-bottom: 1px solid grey;
 }
 
 .jumbotron {
@@ -23,6 +28,10 @@ textarea {
 
 .description {
   white-space: pre-wrap;
+}
+
+.schedule {
+  padding: 20px 0px 40px 0px;
 }
 
 .time-block {
