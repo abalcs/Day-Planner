@@ -1,47 +1,36 @@
 var weekDay = moment();
 $("#currentDay").text(weekDay.format('dddd, MMMM Do YYYY HH:mm A'));
 
-let nine = document.getElementById('#09');
-let ten = document.getElementById('#10');
-let eleven = document.getElementById('#11');
-let twelve = document.getElementById('#12');
-let one = document.getElementById('#13');
-let two = document.getElementById('#14');
-let three = document.getElementById('#15');
-let four = document.getElementById('#16');
-let five = document.getElementById('#17');
-let six = document.getElementById('#18');
+let hours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
+const now = moment().hour()-7;
 
-let row = document.querySelectorAll('.time-row');
-
-let hours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18];
-const now = moment().hour();
-
+//Cycling through the array of hours
 for (const hour of hours) {
+  //Setting new variable equal to the hour within the array and converting it to a string
+  let row = document.getElementById(hour.toString());
+  //Retrieving the value of given hour from local storage
+  const value = localStorage.getItem(hour);
+  //Finding the value of the text area within ID's that correspond with the iterated hour
+  $('#' + hour).find('textarea').val(value);
 
-  if (now < hour) {
-    
+
+  if (hour < now) {
+    row.classList.add('past');
   } else if(now === hour) {
-
+    row.classList.add('present');
   } else {
-
+    row.classList.add('future');
   }
 }
 
-
-/*
-GIVEN I am using a daily planner to create a schedule
-WHEN I open the planner
-THEN the current day is displayed at the top of the calendar
-WHEN I scroll down
-THEN I am presented with timeblocks for standard business hours
-WHEN I view the timeblocks for that day
-THEN each timeblock is color coded to indicate whether it is in the past, present, or future
-WHEN I click into a timeblock
-THEN I can enter an event
-WHEN I click the save button for that timeblock
-THEN the text for that event is saved in local storage
-WHEN I refresh the page
-THEN the saved events persist
-```
-*/
+//Getting each save button and telling them to perform this function on each click
+$(".saveBtn").on('click', function(){
+  //Assigning an ID attribute to the parent div of the save button and assigning that to a new variable called ID
+  const id = $(this).parent().attr('id');
+  //Getting the value of the text area by targeting the parent div and finding the element of text area and assigning its' value to a variable called value.
+  const value = $(this).parent().find('textarea').val()
+  console.log(id);
+  console.log(value);
+  //Setting the key and value to local storage
+  localStorage.setItem(id, value);
+})
