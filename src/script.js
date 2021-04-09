@@ -1,8 +1,16 @@
-var weekDay = moment();
+let weekDay = moment();
 $("#currentDay").text(weekDay.format('dddd, MMMM Do YYYY HH:mm:ss A'));
 
 let hours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 const now = moment().hour();
+
+const timeDiv = document.querySelector('#currentDay');
+
+setInterval(() => {
+
+timeDiv.innerHTML = new Date();
+
+}, 1000);
 
 //Cycling through the array of hours
 for (const hour of hours) {
