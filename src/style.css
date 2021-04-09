@@ -1,5 +1,5 @@
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Harmattan', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
@@ -14,16 +14,11 @@ textarea {
   padding: 10px;
 }
 
-.bordbtm {
-  border-bottom: 1px solid grey;
-}
-
 .jumbotron {
   text-align: center;
   background-color: transparent;
   color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
 }
 
 .description {
@@ -68,7 +63,6 @@ textarea {
 
 .saveBtn {
   border-left: 1px solid black;
-  
   background-color: #06aed5;
   color: white;
 }

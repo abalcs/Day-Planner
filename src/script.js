@@ -1,5 +1,5 @@
 var weekDay = moment();
-$("#currentDay").text(weekDay.format('dddd, MMMM Do YYYY HH:mm A'));
+$("#currentDay").text(weekDay.format('dddd, MMMM Do YYYY HH:mm:ss A'));
 
 let hours = [8, 9, 10, 11, 12, 13, 14, 15, 16, 17];
 const now = moment().hour();
