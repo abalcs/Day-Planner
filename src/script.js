@@ -7,9 +7,7 @@ const now = moment().hour();
 const timeDiv = document.querySelector('#currentDay');
 
 setInterval(() => {
-
-timeDiv.innerHTML = new Date();
-
+timeDiv.innerHTML = new Date( );
 }, 1000);
 
 //Cycling through the array of hours
