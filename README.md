@@ -5,6 +5,9 @@
 
 Link to live website: (https://https://abalcs.github.io/Day-Planner/)
 
+## Tech Used
+HTML, CSS, JavaScript, Moment.js
+
 ## Instructions
 To create a day planner that covers typical business hours, displays the current time localized to the user, with updating time block colors to help keep the user on track, and which allows the user to save their input to their local storage.
 
