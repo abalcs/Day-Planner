@@ -3,7 +3,7 @@
 ![Day Planner Image](src/img/scheduler.png)
 
 
-Link to live website: (https://https://abalcs.github.io/Day-Planner/)
+Link to live website: (https://abalcs.github.io/Day-Planner/)
 
 ## Tech Used
 HTML, CSS, JavaScript, Moment.js
