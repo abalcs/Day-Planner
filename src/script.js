@@ -33,12 +33,9 @@ for (const hour of hours) {
 //Getting each save button and telling them to perform this function on each click
 $(".saveBtn").on('click', function(){
   // Assigning an ID attribute of the parent div of the save button to a new variable called ID
-
   const id = $(this).parent().attr('id');
   //Getting the value of the text area by targeting the parent div and finding the element of text area and assigning its' value to a variable called value.
   const value = $(this).parent().find('textarea').val()
-  console.log(id);
-  console.log(value);
   //Setting the key and value to local storage
   localStorage.setItem(id, value);
 })
